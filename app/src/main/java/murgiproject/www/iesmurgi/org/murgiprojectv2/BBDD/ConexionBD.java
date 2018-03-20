@@ -54,9 +54,7 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
         try {
             Connection connection1;
             Class.forName("com.mysql.jdbc.Driver");
-            String rutaINI="www.iesmurgi.org";
 
-            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://"+rutaINI+"/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) connection1.createStatement();
             String consulta = "SELECT hora, fecha from hora , fecha where id_fecha = id_hora";
             ResultSet result1 = estado.executeQuery(consulta);
