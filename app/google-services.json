@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "718215747502",
+    "firebase_url": "https://murgiv2-master.firebaseio.com",
+    "project_id": "murgiv2-master",
+    "storage_bucket": "murgiv2-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718215747502:android:8db9434b74e441da",
+        "android_client_info": {
+          "package_name": "murgiproject.www.iesmurgi.org.murgiprojectv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718215747502-ku3dpma8jf2ri3u0a2r76mo7rv4cau27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcsfmruGLWmLH9KhGw1HpS0pmzvLQcins"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

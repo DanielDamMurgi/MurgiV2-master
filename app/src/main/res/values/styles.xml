@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/azulnormal</item>
+        <item name="colorPrimaryDark">@color/azulclaro</item>
+        <item name="colorAccent">@color/azuloscuro</item>
+    </style>
+
+    <!-- Tema Murgi. -->
+    <style name="MurgiTema" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/azulnormal</item>
+        <item name="colorPrimaryDark">@color/azulclaro</item>
+        <item name="colorAccent">@color/azuloscuro</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="textoFotos" parent="TextAppearance.AppCompat">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+
+        <!--<item name="android:textColor">@color/Verde9</item>-->
+    </style>
+
+    <style name="botonesFotos" parent="TextAppearance.AppCompat">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:background">@color/VerdeClaro</item>-->
+    </style>
+
+
+    <style name="textoInicio" parent="TextAppearance.AppCompat">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+
+    <style name="MurgiTema.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MurgiTema.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MurgiTema.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Miestilo1">
+        <item name="android:background">#817f7f</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+
+
+</resources>

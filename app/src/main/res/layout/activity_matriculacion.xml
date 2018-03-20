@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@color/blanco"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:orientation="vertical"
+    android:background="@color/blanco"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:text="@string/requisitos_para_acceder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/negro"
+        android:textStyle="normal|bold"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+       />
+
+
+    <TextView
+        android:text="@string/fpBasicaTitulo"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorSubtitulo"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="@string/fpbasica1"
+        android:textColor="@color/negro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+       />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/list"
+        android:layout_gravity="center"
+        android:layout_marginEnd="16dp"
+        />
+
+    <TextView
+        android:text="@string/fpbasica2"
+        android:textColor="@color/negro"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="viewStart"
+        />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+
+        <TextView
+            android:text="@string/fpbsica3"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAlignment="viewStart"
+         />
+
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+        android:text="@string/fpbsica4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/negro"
+        android:textAlignment="viewStart"
+      />
+
+</LinearLayout>
+
+    <TextView
+        android:text="@string/fpmedioTitulo"
+        android:textColor="@color/colorSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+
+
+
+
+    <TextView
+        android:text="@string/fpmedio1"
+        android:textColor="@color/negro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+        android:text="@string/fpmedio2"
+            android:textColor="@color/negro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+      />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+
+        <TextView
+        android:text="@string/fpmedio3"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+       />
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+
+        <TextView
+        android:text="@string/fpmedio4"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+         />
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/fpsuperiorTitulo"
+        android:textColor="@color/colorSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="@string/fpsuperio1"
+        android:layout_width="wrap_content"
+        android:textColor="@color/negro"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+
+ />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+
+    <TextView
+        android:text="@string/fpsuperio2"
+        android:layout_width="wrap_content"
+        android:textColor="@color/negro"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+         />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+        android:text="@string/fpsuperio3"
+            android:textColor="@color/negro"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+       />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+        android:text="@string/fpsuperio4"
+         android:textColor="@color/negro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+
+         />
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+        android:text="@string/fpsuperio5"
+        android:layout_width="wrap_content"
+            android:textColor="@color/negro"
+        android:layout_height="wrap_content"
+            android:textSize="20sp"
+ />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/list"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            />
+
+    <TextView
+        android:text="@string/fpsuperio6"
+        android:textColor="@color/negro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+      />
+
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/blanco"
+    android:layout_marginBottom="24dp"
+    android:layout_marginTop="32dp"
+    android:layout_gravity="center"
+    >
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_weight="2"
+        android:id="@+id/img_secretariaVitual"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/secretariavirtual"
+        android:layout_marginEnd="24dp"
+        android:background="@android:drawable/picture_frame"
+            />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_weight="1"
+        android:id="@+id/masInfo"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/masinfo"
+        android:background="@android:drawable/picture_frame"
+        />
+</LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

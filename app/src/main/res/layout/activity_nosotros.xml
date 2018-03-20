@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="murgiproject.www.iesmurgi.org.murgiprojectv2.Activity_Nosotros"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <TextView
+        android:id="@+id/tv_titulo1nosotros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/texto_nosotros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_m2" />
+
+    <TextView
+        android:id="@+id/tv_titulodesarrollada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/desarrollada"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_juanma2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_juanma2"
+        app:layout_constraintStart_toStartOf="@+id/tv_juanma2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_juanma1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/Juanma_nombre"
+        android:textColor="@color/negro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_juanma2"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_jef"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/Jef_nombre"
+        android:textColor="@color/negro"
+        app:layout_constraintBottom_toTopOf="@+id/tv_titulotambien"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_juanma1" />
+
+    <TextView
+        android:id="@+id/tv_jef_em"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="11dp"
+        android:layout_marginRight="16dp"
+        android:autoLink="email"
+        android:text="@string/Jef_email"
+        android:textColor="@color/colorSubtitulo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_titulotambien"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_juanma2" />
+
+    <TextView
+        android:id="@+id/tv_juanma2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="11dp"
+        android:layout_marginRight="16dp"
+        android:autoLink="email"
+        android:text="@string/Juanma_email"
+        android:textColor="@color/colorSubtitulo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_jef_em"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulodesarrollada" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="16dp"
+        android:text="@string/Luis_nombre"
+        android:textColor="@color/negro"
+        app:layout_constraintBottom_toTopOf="@+id/tv_lm2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulotambien" />
+
+
+    <TextView
+        android:id="@+id/tv_lm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="16dp"
+        android:autoLink="email"
+        android:text="@string/Luis_email"
+        android:textColor="@color/colorSubtitulo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_c1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+    <TextView
+        android:id="@+id/tv_c1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="16dp"
+        android:text="@string/chema_nombre"
+        android:textColor="@color/negro"
+        app:layout_constraintBottom_toTopOf="@+id/tv_c2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lm2" />
+
+    <TextView
+        android:id="@+id/tv_c2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="12dp"
+        android:autoLink="email"
+        android:text="@string/chema_email"
+        android:textColor="@color/colorSubtitulo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_j1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_c1" />
+
+    <TextView
+        android:id="@+id/tv_j1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="16dp"
+        android:text="@string/Juanjo_nombre"
+        android:textColor="@color/negro"
+        app:layout_constraintBottom_toTopOf="@+id/tv_j2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_c2" />
+
+    <TextView
+        android:id="@+id/tv_j2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+
+        android:layout_marginRight="12dp"
+        android:autoLink="email"
+        android:text="@string/Juanjo_email"
+        android:textColor="@color/colorSubtitulo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_m1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_j1" />
+
+    <TextView
+        android:id="@+id/tv_m1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/Miguel_nombre"
+        android:textColor="@color/negro"
+        app:layout_constraintBottom_toTopOf="@+id/tv_m2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_j2" />
+
+    <TextView
+        android:id="@+id/tv_m2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="12dp"
+        android:autoLink="email"
+        android:text="@string/Miguel_email"
+        android:textColor="@color/colorSubtitulo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_titulo1nosotros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_m1" />
+
+    <TextView
+        android:id="@+id/tv_titulotambien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/nosotros_tambien"
+        app:layout_constraintBottom_toTopOf="@+id/textView42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jef_em" />
+
+
+</android.support.constraint.ConstraintLayout>

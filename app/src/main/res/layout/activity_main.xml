@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azulnormal"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/iv_portada"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/c_botones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/portada" />
+
+    <TextView
+        android:id="@+id/tv_textoinicio"
+        style="@style/textoInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/ies_murgi"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_portada"
+        app:layout_constraintEnd_toEndOf="@+id/iv_portada"
+        app:layout_constraintStart_toStartOf="@+id/iv_portada" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/c_botones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#3d69fa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_portada">
+
+
+        <TextView
+            android:id="@+id/tv_textohistoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="@string/historia"
+            app:layout_constraintBottom_toTopOf="@+id/iv_cursos"
+            app:layout_constraintStart_toStartOf="@+id/iv_historia"
+            app:layout_constraintTop_toBottomOf="@+id/iv_historia" />
+
+        <TextView
+            android:id="@+id/tv_textocontactos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="@string/contactos"
+            app:layout_constraintBottom_toTopOf="@+id/iv_citas"
+            app:layout_constraintStart_toStartOf="@+id/iv_contacto"
+            app:layout_constraintTop_toBottomOf="@+id/iv_contacto" />
+
+        <TextView
+            android:id="@+id/tv_textomatricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="@string/matricula"
+            app:layout_constraintBottom_toTopOf="@+id/iv_acercade"
+            app:layout_constraintStart_toStartOf="@+id/iv_matricula"
+            app:layout_constraintTop_toBottomOf="@+id/iv_matricula" />
+
+        <TextView
+            android:id="@+id/tv_textocitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/citas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_citas"
+            app:layout_constraintTop_toBottomOf="@+id/iv_citas" />
+
+        <ImageView
+            android:id="@+id/iv_orla"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textoorla"
+            app:layout_constraintEnd_toStartOf="@+id/iv_historia"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/iconoorla"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_historia"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/historia_cambio"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textohistoria"
+            app:layout_constraintEnd_toStartOf="@+id/iv_contacto"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_orla"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_contacto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contacto_cambio"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textocontactos"
+            app:layout_constraintEnd_toStartOf="@+id/iv_matricula"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_historia"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_matricula"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/matricula_cambio"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textomatricula"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_contacto"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_mapa"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mapa_cambio"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textomapa"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cursos"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textoorla" />
+
+
+        <ImageView
+            android:id="@+id/iv_cursos"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cursos_cambio"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textocursos"
+            app:layout_constraintEnd_toStartOf="@+id/iv_citas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_mapa"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textohistoria"
+            />
+
+        <ImageView
+            android:id="@+id/iv_citas"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cita_cambio"
+            app:layout_constraintBottom_toTopOf="@+id/tv_textocitas"
+            app:layout_constraintEnd_toStartOf="@+id/iv_acercade"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_cursos"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textocontactos"
+            />
+
+        <TextView
+            android:id="@+id/tv_textoorla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="@string/orla"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/iv_mapa"
+            app:layout_constraintStart_toStartOf="@+id/iv_orla"
+            app:layout_constraintTop_toBottomOf="@+id/iv_orla"
+            />
+
+        <TextView
+            android:id="@+id/tv_textocursos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/cursos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_cursos"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cursos"
+            />
+
+        <TextView
+            android:id="@+id/tv_textomapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/mapa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_mapa"
+            app:layout_constraintTop_toBottomOf="@+id/iv_mapa"
+            />
+
+        <ImageView
+            android:id="@+id/iv_acercade"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sobrenosotros"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_citas"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textomatricula"
+            app:srcCompat="@drawable/acercade"
+            />
+
+        <TextView
+            android:id="@+id/tv_sobrenosotros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Nosotros"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_acercade"
+            app:layout_constraintTop_toBottomOf="@+id/iv_acercade"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+

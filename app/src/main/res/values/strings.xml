@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">IES Murgi </string>
+    <string name="contacto_label">Contacto - Proyecto IES Murgi </string>
+    <string name="matriculacion_label">Matriculación - Proyecto IES Murgi </string>
+    <string name="cursos_label">Cursos - Proyecto IES Murgi </string>
+    <string name="mapa_label">Mapa - Proyecto IES Murgi </string>
+    <string name="historia_label">Historia - Proyecto IES Murgi </string>
+    <string name="cita_label">Cita - Proyecto IES Murgi </string>
+
+    <string name="tipo_consulta">Seleccione el tipo de consulta: </string>
+    <string name="cita">CITAS: </string>
+    <string name="nombre_solicitante">Nombre: </string>
+    <string name="apellido_solicitante">Apellido: </string>
+    <string name="enviar_cita">ENVIAR </string>
+    <string name="cancelar_cita">CANCELAR </string>
+
+    <string name="nombre">IES Murgi</string>
+
+    <string name="historia_cabecera">Historia del IES Murgi</string>
+    <string name="historia_cabecera_descripcion">Descripción</string>
+    <string name="historia_texto_descripcion">El IES Murgi abierto a la docencia desde el siglo XX lleva dando clase tanto a docentes de la ESO, Bachillerato y FP.</string>
+    <string name="historia_cabecera_localizacion">Donde estamos</string>
+    <string name="historia_texto_localizacion">Av. Príncipes de España, 17, 04700 El Ejido, Almería. </string>
+
+
+    <string name="fpBasicaTitulo">Ciclos de Formación Profesional Básica</string>
+    <string name="fpbasica1">Para acceder a los Ciclos Formativos de formacion básica será necesario reunir alguno de los requisitos académicos siguientes:</string>
+    <string name="fpbasica2">Tener 15 años cumplidos, o cumplirlos durante el año natural en curso, y no superar los 17 años de edad en el momento del acceso o durante el año natural en curso. </string>
+    <string name="fpbsica3">Haber cursado el primer ciclo de la ESO o, excepcionalmente, haber cursado el segundo curso de la ESO. </string>
+    <string name="fpbsica4">Haber sido propuesto por el equipo docente a los padres, madres o tutores legales para la incorporación a un ciclo de Formación Profesional Básica.</string>
+
+
+    <string name="fpmedioTitulo">Ciclos Formativos de Grado Medio</string>
+    <string name="fpmedio1">Para acceder a los Ciclos Formativos de Grado Medio será necesario reunir alguno de los requisitos académicos siguientes:</string>
+    <string name="fpmedio2">Tener el Título de Educación Secundaria Obligatoria (LOE) o Tener el Título de Graduado en Educación Secundaria Obligatoria (LOGSE).</string>
+    <string name="fpmedio3">Estar en posesión del Título de Técnico (ciclos formativos de Grado Medio). </string>
+    <string name="fpmedio4">Si no cumplo ninguno de estos requisitos, puedo presentarme a las pruebas de acceso que se convocan todos los años, normalmente en junio y puede que también en septiembre. </string>
+
+    <string name="fpsuperiorTitulo">Ciclos Formativos de Grado Superior</string>
+    <string name="fpsuperio1">Para acceder a los Ciclos Formativos de Grado Superior será necesario reunir alguno de los requisitos académicos siguientes:</string>
+    <string name="fpsuperio2">Estar en posesión del título de Bachiller. </string>
+    <string name="fpsuperio3">Estar en posesión de un título de Técnico Superior o Técnico Especialista. </string>
+    <string name="fpsuperio4">Haber superado el curso de orientación universitaria (COU) o preuniversitario (PREU). </string>
+    <string name="fpsuperio5">Haber obtenido una titulación universitaria o equivalente.</string>
+    <string name="fpsuperio6">Si no cumples alguno de estos requisitos puedes presentarte a una prueba de acceso que se convoca todos los años, normalmente en junio o también puede que en septiembre.</string>
+    <string name="requisitos_para_acceder">Admisión y matriculación:</string>
+
+    <string name="logo_murgi">Ies Murgi</string>
+    <string name="contacto">Centro </string>
+
+    <string name="telefono">950 481 000</string>
+    <string name="fax">Fax</string>
+    <string name="fax_telefono">950 323 232</string>
+    <string name="web_dibujo">Web</string>
+    <string name="web_enlace">www.iesmurgi.org</string>
+    <string name="email">Email</string>
+    <string name="email_escrito">dpto.informatica@iesmurgi.org</string>
+    <string name="desarrollada">Aplicación desarrollada por: </string>
+    <string name="Luis_nombre">Luis Monge</string>
+    <string name="Luis_email">luismdam@gmail.com</string>
+    <string name="chema_nombre">Jose María Pérez</string>
+    <string name="chema_email">josemariaperezherrera@gmail.com</string>
+    <string name="Juanjo_nombre">Juan José Cano</string>
+    <string name="Juanjo_email">juanjosecanoasensio@gmail.com</string>
+    <string name="Miguel_nombre">Miguel Jódar</string>
+    <string name="Miguel_email">jodarsanchezmiguel@gmail.com</string>
+    <string name="Juanma_nombre">Juan Manuel de la Cruz</string>
+    <string name="Juanma_email">juanmanueldlc@gmail.com</string>
+    <string name="Jef_nombre">Jef Aerenhouts</string>
+    <string name="Jef_email">jef.ae.dam@gmail.com</string>
+
+    <string name="historia">Historia</string>
+    <string name="contactos">Contactos</string>
+    <string name="matricula">Matrícula</string>
+    <string name="mapa">Mapa</string>
+    <string name="cursos">Cursos</string>
+    <string name="citas">Cita</string>
+    <string name="junta">Información </string>
+    <string name="telefonoJunta">900 848 000</string>
+    <string name="ies_murgi">IES MURGI</string>
+
+
+    <string name="orla">Graduación</string>
+    <string name="texto_nosotros">Proyecto I.E.S.Murgi es una aplicación desarrollada por alumnos del I.E.S.Murgi.
+        La aplicación está basada en dos proyectos de cursos anteriores, Proyecto Ciclos y Proyecto Orlas.
+        Se ha mejorado y se han juntado dichos proyectos en uno solo.</string>
+    <string name="nosotros_tambien">Alumnos que desarrollarón la aplicación en proyectos anteriores</string>
+    <string name="title_activity__cargaimagen">Activity_Cargaimagen</string>
+    <string name="title_activity_actitivy__cargaimagen">Actitivy_Cargaimagen</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!-- LOGIN -->
+    <string name="usuario">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="pregunta_registrado">¿No estás registrado aún?</string>
+    <string name="registrar">Registrar</string>
+
+
+</resources>

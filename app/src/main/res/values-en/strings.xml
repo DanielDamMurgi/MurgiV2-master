@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IES Murgi</string>
+    <string name="mapa">Map</string>
+    <string name="matricula">Enrollment</string>
+    <string name="contactos">Contacts</string>
+    <string name="historia">History</string>
+    <string name="orla">Graduation</string>
+    <string name="junta">Information</string>
+    <string name="citas">Date</string>
+    <string name="cursos">Courses</string>
+    <string name="texto_nosotros">This application is developed by students of I.E.S.Murgi.      The application is based on two projects from previous courses, Project Ciclos  and Project Orlas.         It has been improved and these projects have been combined into one.</string>
+    <string name="nosotros_tambien">Students who developed the application in previous projects</string>
+    <string name="requisitos_para_acceder">Admission and registration:</string>
+    <string name="fpsuperio6">If you do not meet any of these requirements you can submit to an access test that is available every year, usually in June or maybe in September.</string>
+    <string name="fpsuperio5">Have obtained a university degree or equivalent.</string>
+    <string name="fpsuperio4">Have passed the university orientation course (COU) or pre-university (PREU)</string>
+    <string name="fpsuperio3">Be in possession of a degree of Technical  or Technical Specialist.</string>
+    <string name="fpsuperio2">Be in possession of the Bachelor\'s degree.</string>
+    <string name="fpsuperio1">To access the Higher Level vocational Training  it will be necessary to meet some of the following academic requirements:</string>
+    <string name="fpmedio4">If you do not meet any of these requirements, you can apply for the entrance exams that are held every year, usually in June and maybe in September.</string>
+    <string name="fpmedio1">To access the Middle Grade Vocational Training courses it will be necessary to meet one of the following academic requirements:</string>
+    <string name="fpmedioTitulo">Vocational</string>
+    <string name="historia_cabecera_descripcion">Description</string>
+    <string name="historia_texto_descripcion">The IES Murgi open to teaching since the twentieth century has been teaching ESO, Bachillerato and FP.</string>
+    <string name="historia_cabecera">History of IES Murgi</string>
+    <string name="cancelar_cita">Cancel</string>
+    <string name="enviar_cita">Send</string>
+    <string name="apellido_solicitante">Surname</string>
+    <string name="nombre_solicitante">Name</string>
+    <string name="cita">appointment</string>
+    <string name="tipo_consulta">Select the type of inquiry:</string>
+    <string name="cita_label">Appointment - Proyecto IES Murgi</string>
+    <string name="historia_label">History - Proyecto IES Murgi</string>
+    <string name="mapa_label">Map - Proyecto IES Murgi</string>
+    <string name="cursos_label">Courses - Proyecto IES Murgi</string>
+    <string name="matriculacion_label">Registration - Proyecto IES Murgi</string>
+    <string name="contacto_label">Contact - Proyecto IES Murgi</string>
+
+    <string name="usuario">User</string>
+    <string name="contraseña">Password</string>
+    <string name="iniciar_sesion">Sign in</string>
+    <string name="pregunta_registrado">Not registered yet?</string>
+    <string name="registrar">Sign up</string>
+</resources>
