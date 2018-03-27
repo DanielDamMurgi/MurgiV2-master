@@ -10,7 +10,7 @@ android {
         }
     }
     compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "murgiproject.www.iesmurgi.org.murgiprojectv2"
         minSdkVersion 19
@@ -36,26 +36,26 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.google.firebase:firebase-core:11.8.0'
-    compile 'com.google.firebase:firebase-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
 
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support:design:25.1.1'
-    compile 'com.google.android.gms:play-services-maps:11.8.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    compile 'com.google.android.gms:play-services-places:11.8.0'
-    compile 'com.wdullaer:materialdatetimepicker:3.1.1'
+    implementation 'com.android.support:appcompat-v7:25.2.0'
+    implementation 'com.android.support:design:25.1.1'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    implementation 'com.google.android.gms:play-services-places:11.8.0'
+    implementation 'com.wdullaer:materialdatetimepicker:3.1.1'
     // compile files('mysql-connector-java-3.0.17-ga-bin.jar')
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
     implementation files('mysql-connector-java-5.1.42-bin.jar')
 
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
-    compile 'commons-net:commons-net:3.6'
+    implementation 'commons-net:commons-net:3.6'
 }
 apply plugin: 'com.google.gms.google-services'
