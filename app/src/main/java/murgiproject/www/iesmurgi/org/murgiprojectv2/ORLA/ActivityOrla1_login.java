@@ -21,20 +21,21 @@ import murgiproject.www.iesmurgi.org.murgiprojectv2.MainActivity;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class ActivityOrla1_login extends AppCompatActivity {
-    // Atributos
-    private boolean bandera=false; // para saber si el usuario se loguea de manera correcta
+    // ATRIBUTOS
+    //private boolean bandera=false; // para saber si el usuario se loguea de manera correcta
     private Intent activityRegistro, activityCursos;
     private EditText et_usuario, et_clave;
     private FirebaseAuth auth;
     private String correo,clave;
     private ProgressDialog progressDialog;
 
+    // IMPLEMENTACION
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activityorla1_login);
 
-    }
+    } // END onCreate
 
     @Override
     protected void onStart() {
@@ -46,9 +47,6 @@ public class ActivityOrla1_login extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
-
-
-
 
        /* Button b_iniciar = (Button) findViewById(R.id.b_iniciar);
         b_iniciar.setOnClickListener(new View.OnClickListener() {
@@ -73,49 +71,55 @@ public class ActivityOrla1_login extends AppCompatActivity {
 
             }
         });*/
-    }
+    } //END onStart
 
     public void registrar(View view) {
         activityRegistro = new Intent(this,ActivityOrla_Registro.class);
         startActivity(activityRegistro);
 
-    }
+    }// END registrar
 
     public void iniciar_sesion(View view) {
 
-        correo = et_usuario.getText().toString().trim();
-        clave = et_clave.getText().toString();
-
-        if (correo.isEmpty() || clave.isEmpty()){
-            if (correo.isEmpty()){
-                Toast.makeText(this,"Inserta el correo",Toast.LENGTH_LONG).show();
-            }else{
-                Toast.makeText(this, "Inserta la contraseña",Toast.LENGTH_LONG).show();
-            }
-        }else{
-            progressDialog.setMessage("Iniciando sesión...");
+        if (comprobar_acceso()){
+            progressDialog.setMessage(getResources().getString(R.string.iniciciando_sesion));
             progressDialog.show();
 
             auth.signInWithEmailAndPassword(correo,clave).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        Toast.makeText(getApplicationContext(), "Nom oorrecta", Toast.LENGTH_LONG);
                         progressDialog.cancel();
                         activityCursos = new Intent(getApplicationContext(),ActivityOrla2_Cursos.class);
                         activityCursos.putExtra("Posicion",3);
                         startActivity(activityCursos);
+
+                        et_usuario.setText("");
+                        et_clave.setText("");
                     }else{
                         progressDialog.cancel();
-                        Toast.makeText(getApplicationContext(), "Nombre de usuario o clave incorrecta", Toast.LENGTH_LONG);
+                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.clave_contra_incorrectas), Toast.LENGTH_LONG).show();
                     }
 
                 }
             });
         }
 
+    }// END iniciar_sesion
 
+    private boolean comprobar_acceso(){
+        correo = et_usuario.getText().toString().trim();
+        clave = et_clave.getText().toString();
 
-
-    }
+        if (correo.isEmpty() || clave.isEmpty()) {
+            if (correo.isEmpty()) {
+                Toast.makeText(this, getResources().getString(R.string.inserta_correo), Toast.LENGTH_LONG).show();
+                return false;
+            } else {
+                Toast.makeText(this, getResources().getString(R.string.inserta_contraseña), Toast.LENGTH_LONG).show();
+                return false;
+            }
+        }
+        return true;
+    }// END comprobar_acceso
 }

@@ -98,6 +98,16 @@
     <string name="registrar"><u>Registrar</u></string>
     <string name="registrar2">Registrar</string>
     <string name="title_activity_orla__registro">ActivityOrla_Registro</string>
+    <string name="registrando_usuario">Registrando usuario</string>
+    <string name="registrado_correctamente">Registrado Correctamente</string>
+    <string name="fallo_registro">Fallo en el registro. Vuelve a intentarlo más tarde.</string>
+    <string name="inserta_correo">Inserta el correo</string>
+    <string name="inserta_contraseña">Inserta la contraseña</string>
+    <string name="inserta_rep_contraseña">Inserta la repetición de la contraseña</string>
+    <string name="coincide_contraseñas">Las contraseñas no coinciden</string>
+    <string name="min_contraseña">La contraseña debe contener un mínimo de 8 caracteres</string>
+    <string name="iniciciando_sesion">Iniciando sesión</string>
+    <string name="clave_contra_incorrectas">Nombre de usuario o clave incorrecta</string>
 
 
 </resources>

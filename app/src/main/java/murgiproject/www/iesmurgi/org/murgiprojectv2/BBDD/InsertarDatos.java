@@ -28,11 +28,11 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     @Override
     protected Statement doInBackground(String... params) {
         try {
-            String rutaINI ="www.iesmurgi.org";
+            String rutaINI ="";
             Connection connection1;
             Class.forName("com.mysql.jdbc.Driver");
 
-            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/base20172", "ubase20172", "pbase20172");
+            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/", "", "");
             Statement estado = (Statement) connection1.createStatement();
 
             insertUser(estado);
