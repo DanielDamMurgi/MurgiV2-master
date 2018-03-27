@@ -48,29 +48,6 @@ public class ActivityOrla1_login extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
 
-       /* Button b_iniciar = (Button) findViewById(R.id.b_iniciar);
-        b_iniciar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                if (bandera==true) {
-                    Toast toast1 = Toast.makeText(getApplicationContext(), "Te has logueado de manera correcta", Toast.LENGTH_LONG);
-                    toast1.show();
-                    bandera=false;
-
-                    Intent i1= new Intent(getApplicationContext(),ActivityOrla2_Cursos.class); // Creo objeto Intent
-                    i1.putExtra("Posicion",posicion);
-                    startActivity(i1);
-                }
-
-                else { // si es falso
-                    Toast toast1 = Toast.makeText(getApplicationContext(), "Nombre de usuario o clave incorrecta", Toast.LENGTH_LONG);
-                    toast1.show();
-                }
-
-            }
-        });*/
     } //END onStart
 
     public void registrar(View view) {

@@ -4,67 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.ActivityOrla_Registro">
+    tools:context="murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.ActivityOrla_Registro"
+    tools:layout_editor_absoluteY="81dp">
 
 
     <Button
         android:id="@+id/BT_Registro_Registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:padding="20dp"
+        android:layout_marginTop="60dp"
         android:background="@color/azulnormal"
-        android:textColor="@color/blanco"
         android:onClick="registro"
+        android:padding="20dp"
         android:text="@string/registrar2"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TXT_Registro_RepetirContraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/TXT_Registro_RepetirContraseña"
+        app:layout_constraintVertical_bias="0.13999999" />
 
     <EditText
         android:id="@+id/TXT_Registro_Correo"
-        android:layout_width="0dp"
+        android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="@string/usuario"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/TXT_Registro_Contraseña"
-        android:layout_width="0dp"
+        android:layout_width="356dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="142dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="@string/contraseña"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/TXT_Registro_Correo"
+        app:layout_constraintStart_toStartOf="@+id/TXT_Registro_Correo"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_Registro_Correo" />
 
     <EditText
         android:id="@+id/TXT_Registro_RepetirContraseña"
-        android:layout_width="0dp"
+        android:layout_width="352dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+
         android:ems="10"
         android:hint="@string/repetir_contraseña"
-
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/TXT_Registro_Contraseña"
+        app:layout_constraintStart_toStartOf="@+id/TXT_Registro_Contraseña"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_Registro_Contraseña" />
 </android.support.constraint.ConstraintLayout>

@@ -5,24 +5,20 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
-import java.io.Console;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class ActivityOrla_Registro extends AppCompatActivity {
 
+    // ATRIBUTOS
     private EditText correo, clave1, clave2;
     private FirebaseAuth auth;
     private String email, pass, auxPass;
@@ -30,14 +26,13 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     private Intent activityLogin;
     private int tamañoClave = 8;
 
-
+    // IMPLEMENTACION
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orla__registro);
 
-
-    }
+    }// END onCreate
 
     @Override
     protected void onStart() {
@@ -52,8 +47,7 @@ public class ActivityOrla_Registro extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         activityLogin = new Intent(getApplicationContext(), ActivityOrla1_login.class);
 
-
-    }
+    }// END onStart
 
     public void registro(View view) {
 
@@ -77,10 +71,9 @@ public class ActivityOrla_Registro extends AppCompatActivity {
                 }
             });
         }
-    }
+    }// END registro
 
     private boolean comprobarCampos() {
-
 
         if (correo.getText().length() <= 0 || clave1.getText().length() <= 0 || clave2.getText().length() <= 0) {
 
@@ -109,6 +102,6 @@ public class ActivityOrla_Registro extends AppCompatActivity {
         }
 
         return true;
-    }
+    }// END comprobarCampos
 
 }
