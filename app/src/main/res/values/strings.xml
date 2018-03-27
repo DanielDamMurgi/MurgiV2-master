@@ -90,11 +90,14 @@
     <string name="title_activity_main2">Main2Activity</string>
 
     <!-- LOGIN -->
-    <string name="usuario">Usuario</string>
+    <string name="usuario">Correo</string>
     <string name="contraseña">Contraseña</string>
+    <string name="repetir_contraseña">Repetir Contraseña</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="pregunta_registrado">¿No estás registrado aún?</string>
-    <string name="registrar">Registrar</string>
+    <string name="registrar"><u>Registrar</u></string>
+    <string name="registrar2">Registrar</string>
+    <string name="title_activity_orla__registro">ActivityOrla_Registro</string>
 
 
 </resources>
