@@ -9,11 +9,13 @@ import java.sql.SQLException;
 
 
 public class InsertarDatos extends AsyncTask<String, Void, Statement> {
-    // Atributos
+
+    // ATRIBUTOS
     Activity activity1;
     private String nombre, apellidos, asunto,fecha, hora;
 
-    // Constructor
+
+    // CONSTRUCTOR
     public InsertarDatos(Activity activity1, String nombre, String apellidos, String asunto, String fecha, String hora) {
         this.activity1 = activity1;
         this.nombre = nombre;
@@ -26,11 +28,11 @@ public class InsertarDatos extends AsyncTask<String, Void, Statement> {
     @Override
     protected Statement doInBackground(String... params) {
         try {
+            String rutaINI ="www.iesmurgi.org";
             Connection connection1;
             Class.forName("com.mysql.jdbc.Driver");
 
-
-
+            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/base20172", "ubase20172", "pbase20172");
             Statement estado = (Statement) connection1.createStatement();
 
             insertUser(estado);

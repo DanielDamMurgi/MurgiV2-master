@@ -37,9 +37,11 @@
     <string name="matriculacion_label">Registration - Proyecto IES Murgi</string>
     <string name="contacto_label">Contact - Proyecto IES Murgi</string>
 
-    <string name="usuario">User</string>
+    <string name="usuario">Email</string>
     <string name="contraseña">Password</string>
+    <string name="repetir_contraseña">Repeat Password</string>
     <string name="iniciar_sesion">Sign in</string>
     <string name="pregunta_registrado">Not registered yet?</string>
-    <string name="registrar">Sign gggp</string>
+    <string name="registrar"><u>Sign up</u></string>
+    <string name="registrar2">Sign up</string>
 </resources>
