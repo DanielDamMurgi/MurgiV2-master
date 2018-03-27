@@ -30,8 +30,6 @@ public class ActivityOrla2_Cursos extends AppCompatActivity {
        // lv_orlacursos.setAdapter(adapter1);
         lv_orlacursos.setAdapter(adapter1);
 
-
-
         lv_orlacursos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

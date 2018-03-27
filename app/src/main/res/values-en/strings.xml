@@ -37,6 +37,7 @@
     <string name="matriculacion_label">Registration - Proyecto IES Murgi</string>
     <string name="contacto_label">Contact - Proyecto IES Murgi</string>
 
+    <!-- LOGIN -->
     <string name="usuario">Email</string>
     <string name="contraseña">Password</string>
     <string name="repetir_contraseña">Repeat Password</string>
@@ -44,4 +45,15 @@
     <string name="pregunta_registrado">Not registered yet?</string>
     <string name="registrar"><u>Sign up</u></string>
     <string name="registrar2">Sign up</string>
+    <string name="registrando_usuario">Registering user</string>
+    <string name="registrado_correctamente">Registered Successfully</string>
+    <string name="fallo_registro">Fail in the registry. Try again later.</string>
+    <string name="inserta_correo">Insert the email</string>
+    <string name="inserta_contraseña">Insert the password</string>
+    <string name="inserta_rep_contraseña">Insert the password repetition</string>
+    <string name="coincide_contraseñas">Passwords do not match</string>
+    <string name="min_contraseña">The password must contain a minimum of 8 characters</string>
+    <string name="iniciciando_sesion">Logging in</string>
+    <string name="clave_contra_incorrectas">Incorrect username or password</string>
+
 </resources>

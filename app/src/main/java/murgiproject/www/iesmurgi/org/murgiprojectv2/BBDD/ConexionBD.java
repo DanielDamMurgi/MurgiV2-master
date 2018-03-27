@@ -15,7 +15,7 @@ import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
 
 public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
     // Atributos
-    Activity activity1;
+    private Activity activity1;
 
     // Constructor
     public ConexionBD(Activity activity1) {
@@ -52,11 +52,11 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
     protected ResultSet doInBackground(String... strings) {
 
         try {
-            String rutaINI ="www.iesmurgi.org";
+            String rutaINI ="";
             Connection connection1;
             Class.forName("com.mysql.jdbc.Driver");
 
-            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/base20172", "ubase20172", "pbase20172");
+            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/", "", "");
             Statement estado = (Statement) connection1.createStatement();
             String consulta = "SELECT hora, fecha from hora , fecha where id_fecha = id_hora";
             ResultSet result1 = estado.executeQuery(consulta);

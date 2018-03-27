@@ -27,8 +27,8 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     private FirebaseAuth auth;
     private String email, pass, auxPass;
     private ProgressDialog progressDialog;
-    private String TAG;
     private Intent activityLogin;
+    private int tamañoClave = 8;
 
 
     @Override
@@ -42,9 +42,6 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        //FirebaseUser currentUser = auth.getCurrentUser();
-        //updateUI(currentUser);
 
         correo = (EditText) findViewById(R.id.TXT_Registro_Correo);
         clave1 = (EditText) findViewById(R.id.TXT_Registro_Contraseña);
@@ -61,25 +58,21 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     public void registro(View view) {
 
         if (comprobarCampos()) {
-            progressDialog.setMessage("Registrando usuario...");
+            progressDialog.setMessage(getResources().getString(R.string.registrando_usuario));
             progressDialog.show();
 
-            auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         progressDialog.cancel();
-                        Toast.makeText(ActivityOrla_Registro.this, "Registrado correctamente", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityOrla_Registro.this, getResources().getString(R.string.registrado_correctamente), Toast.LENGTH_SHORT).show();
                         startActivity(activityLogin);
-                        ///FirebaseUser user = auth.getCurrentUser();
-                        //updateUI(user);
+
                     } else {
                         progressDialog.cancel();
 
-                        //Log.v(TAG, "createUserWithEmail:failure", task.getException());
-                        Toast.makeText(ActivityOrla_Registro.this, "Fallo de registro."+task.getException(),
-                                Toast.LENGTH_SHORT).show();
-                        //updateUI(null);
+                        Toast.makeText(ActivityOrla_Registro.this, getResources().getString(R.string.fallo_registro), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -89,16 +82,16 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     private boolean comprobarCampos() {
 
 
-        if (correo.getText().length() <=0 || clave1.getText().length() <=0 || clave2.getText().length()<=0) {
+        if (correo.getText().length() <= 0 || clave1.getText().length() <= 0 || clave2.getText().length() <= 0) {
 
-            if (correo.getText().length() <=0) {
-                Toast.makeText(this, "Inserta el correo", Toast.LENGTH_LONG).show();
+            if (correo.getText().length() <= 0) {
+                Toast.makeText(this, getResources().getString(R.string.inserta_correo), Toast.LENGTH_LONG).show();
                 return false;
-            } else if (clave1.getText().length() <=0) {
-                Toast.makeText(this, "Inserta la contraseña", Toast.LENGTH_LONG).show();
+            } else if (clave1.getText().length() <= 0) {
+                Toast.makeText(this, getResources().getString(R.string.inserta_contraseña), Toast.LENGTH_LONG).show();
                 return false;
             } else {
-                Toast.makeText(this, "Inserta la repetición de la contraseña", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getResources().getString(R.string.inserta_rep_contraseña), Toast.LENGTH_LONG).show();
                 return false;
             }
         } else {
@@ -107,10 +100,12 @@ public class ActivityOrla_Registro extends AppCompatActivity {
             auxPass = clave2.getText().toString();
 
             if (!pass.equals(auxPass)) {
-                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getResources().getString(R.string.inserta_rep_contraseña), Toast.LENGTH_LONG).show();
+                return false;
+            } else if (pass.length() < tamañoClave) {
+                Toast.makeText(this, getResources().getString(R.string.min_contraseña), Toast.LENGTH_LONG).show();
                 return false;
             }
-
         }
 
         return true;
