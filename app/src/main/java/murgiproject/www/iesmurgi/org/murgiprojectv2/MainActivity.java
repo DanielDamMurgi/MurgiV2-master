@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (savedInstanceState==null) {
-            crearUsuarios();
             crearCursos();
             crearAlumnos();
         }
@@ -109,20 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i1);
             }
         });
-    }
-
-    private void crearUsuarios() {
-        arrayusuarios.add(new Usuario("esoa","esoa"));
-       // arrayusuarios.add(new Usuario("esob","esob"));
-        //arrayusuarios.add(new Usuario("esoc","esoc"));
-        arrayusuarios.add(new Usuario("bacha","bacha"));
-       // arrayusuarios.add(new Usuario("bachb","bachb"));
-      //  arrayusuarios.add(new Usuario("bachc","bachc"));
-        arrayusuarios.add(new Usuario("dam","dam"));
-       // arrayusuarios.add(new Usuario("gad","gad"));
-
-
-        arrayusuarios.add(new Usuario("admin","admin"));
     }
 
     private void crearCursos() {
