@@ -5,7 +5,7 @@ android {
         release {
             keyAlias 'iesmurgi'
             keyPassword 'iesmurgi'
-            storeFile file('C:\\Documents\\StudioProjects\\ClaveproyectoMurgi\\key.jks')
+            storeFile file('C:\\Users\\Equipo\\Documents\\Android Studio Proyectos\\MurgiV2-master-key\\key.jks')
             storePassword 'iesmurgi'
         }
     }
@@ -43,7 +43,6 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-core:11.8.0'
     implementation 'com.google.firebase:firebase-auth:11.8.0'
-
     implementation 'com.android.support:appcompat-v7:25.2.0'
     implementation 'com.android.support:design:25.1.1'
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
