@@ -20,6 +20,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/et_usuario"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="5dp"
+        android:hint="@string/usuario"
+        app:layout_constraintBottom_toTopOf="@+id/et_clave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <EditText
         android:id="@+id/et_clave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -34,21 +50,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_usuario" />
-
-    <EditText
-        android:id="@+id/et_usuario"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@android:color/transparent"
-        android:drawablePadding="5dp"
-        android:hint="@string/usuario"
-        app:layout_constraintBottom_toTopOf="@+id/et_clave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <Button
         android:id="@+id/b_iniciar"
@@ -69,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_clave" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/TXV_login_registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -93,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="@string/registrar"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintStart_toEndOf="@+id/TXV_login_registrar"
+        app:layout_constraintTop_toTopOf="@+id/TXV_login_registrar" />
 
 </android.support.constraint.ConstraintLayout>

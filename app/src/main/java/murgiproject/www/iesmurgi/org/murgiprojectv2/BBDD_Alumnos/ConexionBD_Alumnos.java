@@ -1,4 +1,4 @@
-package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD;
+package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -6,19 +6,20 @@ import android.widget.Toast;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
 
+public class ConexionBD_Alumnos extends AsyncTask<String, Void, ResultSet> {
 
-public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
     // Atributos
     private Activity activity1;
 
     // Constructor
-    public ConexionBD(Activity activity1) {
+    public ConexionBD_Alumnos(Activity activity1) {
         this.activity1=activity1;
     }
 
@@ -46,8 +47,6 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
 
     }
 
-
-
     @Override
     protected ResultSet doInBackground(String... strings) {
 
@@ -56,9 +55,9 @@ public class ConexionBD extends AsyncTask<String, Void, ResultSet> {
             Connection connection1;
             Class.forName("com.mysql.jdbc.Driver");
 
-            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/base20172", "ubase20172", "pbase20172");
+            connection1 = (Connection) DriverManager.getConnection("jdbc:mysql://" + rutaINI + "/bjeff", "ujeff", "pjeff");
             Statement estado = (Statement) connection1.createStatement();
-            String consulta = "SELECT hora, fecha from hora , fecha where id_fecha = id_hora";
+            String consulta = strings[0];
             ResultSet result1 = estado.executeQuery(consulta);
 
             return result1;

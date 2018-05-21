@@ -173,13 +173,13 @@ public class Citas extends AppCompatActivity implements DatePickerDialog.OnDateS
 
 
                 if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || edt_fecha.getText().toString().isEmpty() || edt_hora.getText().toString().isEmpty() || asunto.equals("") || dateseleccionado==null){
-                    Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Inserte todos los datos", Snackbar.LENGTH_SHORT).show();
-
-
+                    Snackbar.make(findViewById(android.R.id.content), "¡¡¡Error!!! Inserte todos los datos",
+                            Snackbar.LENGTH_SHORT).show();
                 }
 
                 else if (dateseleccionado.before(dateactual)) {
-                    Snackbar.make(findViewById(android.R.id.content), "Debes seleccionar una fecha posterior al dia de hoy", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(android.R.id.content), "Debes seleccionar una fecha posterior al dia de hoy",
+                            Snackbar.LENGTH_SHORT).show();
                 }
 
                 else{
