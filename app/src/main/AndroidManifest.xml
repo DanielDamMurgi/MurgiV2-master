@@ -57,9 +57,6 @@
             android:label="@string/cursos_label" />
         <activity android:name=".Activity_Nosotros" />
         <activity android:name=".ORLA.ActivityOrla1_login" android:screenOrientation="portrait"/>
-        <activity android:name=".ORLA.ActivityOrla2_Cursos" />
-        <activity android:name=".ORLA.ActivityOrla3_VerCursos" />
-        <activity android:name=".ORLA.ActivityOrla4_Veralumno" />
         <activity android:name=".ORLA.ActivityOrla_Registro" android:screenOrientation="portrait"/>
 
     </application>

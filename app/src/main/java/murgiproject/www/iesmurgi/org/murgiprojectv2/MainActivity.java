@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.Usuario;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.ActivityOrla1_login;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Alumno;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Curso;
 
 public class MainActivity extends AppCompatActivity {
     // Atributos

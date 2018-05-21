@@ -32,6 +32,7 @@ public class AdapterCursoListview extends ArrayAdapter<AdapterDatos_Curso> {
         Log.v("----------------","asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
         TextView txtNom = (TextView) root.findViewById(R.id.idTxtCursoNom);
+
         txtNom.setText(curso.get(position).getNombre());
 
         return root;
