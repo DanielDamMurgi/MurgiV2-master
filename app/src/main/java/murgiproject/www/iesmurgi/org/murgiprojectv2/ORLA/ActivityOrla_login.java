@@ -20,7 +20,7 @@ import java.security.MessageDigest;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.MainActivity;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
-public class ActivityOrla1_login extends AppCompatActivity {
+public class ActivityOrla_login extends AppCompatActivity {
     // ATRIBUTOS
     //private boolean bandera=false; // para saber si el usuario se loguea de manera correcta
     private Intent activityRegistro, activityCursos;
@@ -67,8 +67,7 @@ public class ActivityOrla1_login extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         progressDialog.cancel();
-                        activityCursos = new Intent(getApplicationContext(),ActivityOrla2_Cursos.class);
-                        activityCursos.putExtra("Posicion",3);
+                        activityCursos = new Intent(getApplicationContext(),ActivityCursos.class);
                         startActivity(activityCursos);
 
                         et_usuario.setText("");

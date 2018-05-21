@@ -45,7 +45,7 @@ public class ActivityOrla_Registro extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
-        activityLogin = new Intent(getApplicationContext(), ActivityOrla1_login.class);
+        activityLogin = new Intent(getApplicationContext(), ActivityOrla_login.class);
 
     }// END onStart
 

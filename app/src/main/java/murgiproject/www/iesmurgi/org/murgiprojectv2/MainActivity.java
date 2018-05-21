@@ -9,27 +9,26 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.Usuario;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.ActivityOrla1_login;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.ActivityOrla_login;
 
 public class MainActivity extends AppCompatActivity {
-    // Atributos
+   /* // Atributos
     public static ArrayList<Usuario> arrayusuarios = new ArrayList<Usuario>();
     public static ArrayList<Curso> arraycurso= new ArrayList<Curso>();
 
     public static ArrayList<Alumno> arrayalumnosesoa = new ArrayList<Alumno>();
     public static ArrayList<Alumno> arrayalumnosbacha = new ArrayList<Alumno>();
-    public static ArrayList<Alumno> arrayalumnosdam = new ArrayList<Alumno>();
+    public static ArrayList<Alumno> arrayalumnosdam = new ArrayList<Alumno>();*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        if (savedInstanceState==null) {
+        /* if (savedInstanceState==null) {
             crearCursos();
             crearAlumnos();
-        }
+        }*/
 
 
         // Al pulsar
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         iv_orla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ActivityOrla1_login.class);
+                Intent intent = new Intent(getApplicationContext(), ActivityOrla_login.class);
                 startActivity(intent);
             }
         });
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void crearCursos() {
+   /* private void crearCursos() {
         arraycurso.add(new Curso("ESO A"));
        // arraycurso.add(new Curso("ESO B"));
        // arraycurso.add(new Curso("ESO C"));
@@ -186,6 +185,6 @@ public class MainActivity extends AppCompatActivity {
         arrayalumnosdam.add(new Alumno("cano asensio, juan jose","DAM","https://drive.google.com/file/d/0B1hz1D7khQcJbER5a1dGRnhlbjg/view"));
         arrayalumnosdam.add(new Alumno("borrego ruiz, ismael","DAM","https://drive.google.com/file/d/0B1hz1D7khQcJZ2ZOOThkZVpXV1U/view"));
     }
-
+*/
 
 }

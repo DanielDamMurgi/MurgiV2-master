@@ -4,7 +4,7 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA;
  * Created by Narka on 17/05/2018.
  */
 
-public class AdapterDatos_Alumno {
+public class Alumno {
     private String nombre;
     private String app;
     private String app2;
@@ -12,7 +12,7 @@ public class AdapterDatos_Alumno {
     private String curso;
     private String id_curso;
 
-    public AdapterDatos_Alumno(String nombre, String app, String app2, String rutaImg, String curso, String id_curso) {
+    public Alumno(String nombre, String app, String app2, String rutaImg, String curso, String id_curso) {
         this.nombre = nombre;
         this.app = app;
         this.app2 = app2;

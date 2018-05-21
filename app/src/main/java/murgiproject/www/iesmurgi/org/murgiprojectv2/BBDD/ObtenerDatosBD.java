@@ -3,9 +3,7 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD;
 /**
  * Created by Narka on 17/05/2018.
  */
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -15,9 +13,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Act2Orla_curso;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.AdapterDatos_Alumno;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.AdapterDatos_Curso;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Alumno;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Curso;
 
 public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
     //datos para conectar
@@ -33,8 +30,8 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
     private ResultSet resultSetAlumnos = null;
 
     //Adapters
-    public static  ArrayList <AdapterDatos_Curso> adaptarCurso = new ArrayList<>();
-    public static   ArrayList <AdapterDatos_Alumno> adaptarAlumno = new ArrayList<>();
+    public static  ArrayList <Curso> adaptarCurso = new ArrayList<>();
+    public static   ArrayList <Alumno> adaptarAlumno = new ArrayList<>();
 
     //activit
     private Context con = null;
@@ -73,7 +70,7 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
         try {
             while (resultSetCursos.next()) {//
 
-                adaptarCurso.add(new AdapterDatos_Curso(
+                adaptarCurso.add(new Curso(
                         resultSetCursos.getString("id_curso"),
                         resultSetCursos.getString("nombre")
                 ));
@@ -85,7 +82,7 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
                 pp=0;
             while (resultSetAlumnos.next()) {
 
-                adaptarAlumno.add(new AdapterDatos_Alumno(
+                adaptarAlumno.add(new Alumno(
                         resultSetAlumnos.getString("nombre")+" ",
                         resultSetAlumnos.getString("app"),
                         resultSetAlumnos.getString("app2"),
@@ -112,7 +109,7 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
             ae.printStackTrace();
         }
         close();
-        con.startActivity(new Intent(con,Act2Orla_curso.class));
+       // con.startActivity(new Intent(con,Act2Orla_curso.class));
     }
 
 
