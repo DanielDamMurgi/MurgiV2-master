@@ -10,13 +10,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.Cursos;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class ActivityCursos extends AppCompatActivity {
     private ArrayList<Curso> cursos;
-
+    private ObtenerDatosBD datos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +25,9 @@ public class ActivityCursos extends AppCompatActivity {
         setContentView(R.layout.activity_cursos);
         cursos = new ArrayList<>();
 
+        datos = new ObtenerDatosBD(this);
 
-        cursos.add(new Curso("2","vbre"));
+        cursos = datos.adaptarCurso;
 
         CursosAdapter cursosAdapter= new CursosAdapter(this,cursos);
         ListView listView = (ListView) findViewById(R.id.ListaCursos);
