@@ -3,6 +3,7 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD;
 /**
  * Created by Narka on 17/05/2018.
  */
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Alumno;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.Curso;
 
-public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
+public class ObtenerDatosBD extends AsyncTask<String, Void, ResultSet>{
     //datos para conectar
     private final String dir = "jdbc:mysql://www.iesmurgi.org:3306/bjeff";
     private final String usu = "ujeff";
@@ -34,38 +35,14 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
     public static   ArrayList <Alumno> adaptarAlumno = new ArrayList<>();
 
     //activit
-    private Context con = null;
+    private Activity activity = null;
 
-    public ObtenerDatosBD(Context con) {
-        this.con = con.getApplicationContext();
+    public ObtenerDatosBD(Activity activty) {
+        this.activity = activity;
     }
 
     @Override
-    protected String doInBackground(Void... Void) {
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(dir,usu,pass);
-            statementCurso = connection.createStatement();
-            statementAlumno = connection.createStatement();
-            resultSetCursos = statementCurso.executeQuery("select * from curso");
-            resultSetAlumnos = statementAlumno.executeQuery("select * from alumno");
-
-
-
-        } catch (Exception ae) {
-            Log.v("Error", "Error connection db obtenerdatosdb "+ae.getLocalizedMessage());
-            ae.printStackTrace();
-        }
-
-        return null;
-    }
-
-
-
-    @Override
-    protected void onPostExecute(String x) {
-        super.onPostExecute(x);
+    protected void onPostExecute(ResultSet result) {
         int pp=0;
         try {
             while (resultSetCursos.next()) {//
@@ -105,7 +82,7 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
             }
 
         } catch (Exception ae) {
-            Log.v("Error", "Error connection db obtenerdatosdb onpostExecute "+ae.getLocalizedMessage());
+            Log.v("Error", "Error connection db obtenerdatosdb onpostExecute --------------------------------------"+ae.getLocalizedMessage());
             ae.printStackTrace();
         }
         close();
@@ -128,4 +105,23 @@ public class ObtenerDatosBD extends AsyncTask<Void, Void , String>{
         }
     }
 
+    @Override
+    protected ResultSet doInBackground(String... strings) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection(dir,usu,pass);
+            statementCurso = connection.createStatement();
+            statementAlumno = connection.createStatement();
+            resultSetCursos = statementCurso.executeQuery("select id_curso, nombre from curso");
+            resultSetAlumnos = statementAlumno.executeQuery("select * from alumno");
+
+
+
+        } catch (Exception ae) {
+            Log.v("Error", "Error connection db obtenerdatosdb -----------------------------"+ae.getLocalizedMessage());
+            ae.printStackTrace();
+        }
+
+        return null;
+    }
 }

@@ -23,13 +23,11 @@ public class ActivityCursos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cursos);
+
         cursos = new ArrayList<>();
 
-        datos = new ObtenerDatosBD(this);
 
-        cursos = datos.adaptarCurso;
-
-        CursosAdapter cursosAdapter= new CursosAdapter(this,cursos);
+        CursosAdapter cursosAdapter= new CursosAdapter(this,datos.adaptarCurso);
         ListView listView = (ListView) findViewById(R.id.ListaCursos);
         listView.setAdapter(cursosAdapter);
 

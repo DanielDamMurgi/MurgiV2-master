@@ -1,6 +1,7 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.security.MessageDigest;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.MainActivity;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
@@ -66,9 +68,12 @@ public class ActivityOrla_login extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
+
                         progressDialog.cancel();
                         activityCursos = new Intent(getApplicationContext(),ActivityCursos.class);
+                       // new ObtenerDatosBD(ActivityCursos.cl).execute();
                         startActivity(activityCursos);
+
 
                         et_usuario.setText("");
                         et_clave.setText("");
