@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Curso;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 /**
