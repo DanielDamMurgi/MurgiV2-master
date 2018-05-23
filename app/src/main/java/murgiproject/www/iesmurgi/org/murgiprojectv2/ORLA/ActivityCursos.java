@@ -3,16 +3,11 @@ package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.lang.reflect.Array;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
-import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD.ObtenerDatosBD;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.Citas;
-import murgiproject.www.iesmurgi.org.murgiprojectv2.Cursos;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Curso;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class ActivityCursos extends AppCompatActivity {
@@ -32,5 +27,4 @@ public class ActivityCursos extends AppCompatActivity {
         listView.setAdapter(cursosAdapter);
 
     }
-
 }
