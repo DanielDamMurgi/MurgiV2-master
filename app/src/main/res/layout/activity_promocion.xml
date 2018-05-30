@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".ORLA.ActivityCursos">
+    tools:context=".ORLA.PromocionActivity">
 
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.curso.FragmentoCurso"
-        android:id="@+id/fragmento_cursos"
+        android:name="murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.promocion.FragmentoPromocion"
+        android:id="@+id/fragmento_promocion"
         ></fragment>
 
 </FrameLayout>
