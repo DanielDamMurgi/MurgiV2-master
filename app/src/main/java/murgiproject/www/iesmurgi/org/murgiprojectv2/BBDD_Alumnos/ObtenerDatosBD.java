@@ -29,6 +29,8 @@ public class ObtenerDatosBD extends AsyncTask<String, Void, ResultSet> {
     private ResultSet resultSetPromocion = null;
     private ResultSet resultSetAlumnos = null;
 
+
+
     //Adapters
     public static ArrayList<Promocion> adaptarPromocion = new ArrayList<>();
     public static ArrayList<Curso> adaptarCurso = new ArrayList<>();
@@ -36,6 +38,18 @@ public class ObtenerDatosBD extends AsyncTask<String, Void, ResultSet> {
 
     //Activity
     private Activity activity = null;
+
+    public String getDir() {
+        return dir;
+    }
+
+    public String getUsu() {
+        return usu;
+    }
+
+    public String getPass() {
+        return pass;
+    }
 
     public ObtenerDatosBD(Activity activty) {
         this.activity = activity;

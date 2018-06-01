@@ -25,7 +25,7 @@ public class ActivityOrla_login extends AppCompatActivity {
     private EditText et_usuario, et_clave;
     private FirebaseAuth auth;
     private String correo,clave;
-    private ProgressDialog progressDialog;
+    public ProgressDialog progressDialog;
     private Button ini;
 
     // IMPLEMENTACION
@@ -78,9 +78,8 @@ public class ActivityOrla_login extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         new ObtenerDatosBD(ActivityOrla_login.this).execute();
-                        progressDialog.cancel();
-                        activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
 
+                        activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
                         startActivity(activityCursos);
 
 
