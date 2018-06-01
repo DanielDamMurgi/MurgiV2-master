@@ -33,7 +33,7 @@ public class FragmentoPromocion extends Fragment {
     public FragmentoPromocion() {
 
     }
-
+//
     @Override
     public void onStart() {
         super.onStart();
