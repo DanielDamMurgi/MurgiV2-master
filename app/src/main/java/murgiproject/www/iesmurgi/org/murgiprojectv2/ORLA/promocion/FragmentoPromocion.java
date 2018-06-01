@@ -11,13 +11,15 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Promocion;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class FragmentoPromocion extends Fragment {
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
-
+    private ArrayList<Promocion> pro;
+    private ObtenerDatosBD datosBD;
 
     public FragmentoPromocion() {
 
@@ -32,9 +34,8 @@ public class FragmentoPromocion extends Fragment {
         linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_promocion);
 
-        ArrayList<Promocion> pro = new ArrayList<>();
-        pro.add(new Promocion("1","2016/2017"));
-        pro.add(new Promocion("2","2017/2018"));
+        pro = new ArrayList<>();
+        pro =  datosBD.adaptarPromocion;
 
         PromocionAdapter adapter = new PromocionAdapter(pro);
         recyclerView.setLayoutManager(linearLayoutManager);

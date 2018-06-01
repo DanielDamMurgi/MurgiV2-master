@@ -30,7 +30,7 @@ public class ObtenerDatosBD extends AsyncTask<String, Void, ResultSet> {
     private ResultSet resultSetAlumnos = null;
 
     //Adapters
-    public static ArrayList<Curso> adaptarPromocion = new ArrayList<>();
+    public static ArrayList<Promocion> adaptarPromocion = new ArrayList<>();
     public static ArrayList<Curso> adaptarCurso = new ArrayList<>();
     public static ArrayList<Alumno> adaptarAlumno = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class ObtenerDatosBD extends AsyncTask<String, Void, ResultSet> {
         try {
             pp = 0;
             while (resultSetPromocion.next()) { //OBTENER DATOS TABLA PROMOCION
-                adaptarPromocion.add(new Curso(
+                adaptarPromocion.add(new Promocion(
                         resultSetPromocion.getString("id_promocion"),
                         resultSetPromocion.getString("nombre")
                 ));

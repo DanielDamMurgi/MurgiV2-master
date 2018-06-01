@@ -11,20 +11,12 @@ import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class ActivityCursos extends AppCompatActivity {
-    private ArrayList<Curso> cursos;
-    private ObtenerDatosBD datos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cursos);
 
-        cursos = new ArrayList<>();
-
-
-        CursosAdapter cursosAdapter= new CursosAdapter(this,datos.adaptarCurso);
-        ListView listView = (ListView) findViewById(R.id.ListaCursos);
-        listView.setAdapter(cursosAdapter);
 
     }
 }

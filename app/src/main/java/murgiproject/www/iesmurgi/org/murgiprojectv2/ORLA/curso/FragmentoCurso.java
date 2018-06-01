@@ -25,16 +25,16 @@ public class FragmentoCurso extends Fragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fragmento_promocion,container,false);
+        View view = inflater.inflate(R.layout.fragment_fragmento_cursos,container,false);
 
         linearLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_promocion);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_cursos);
 
-        ArrayList<Curso> pro = new ArrayList<>();
-        pro.add(new Curso("1","2016/2017"));
-        pro.add(new Curso("2","2017/2018"));
+        ArrayList<Curso> cursos = new ArrayList<>();
+        cursos.add(new Curso("1","2016/2017"));
+        cursos.add(new Curso("2","2017/2018"));
 
-        CursoAdapter adapter = new CursoAdapter(pro);
+        CursoAdapter adapter = new CursoAdapter(cursos);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
 

@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
 public class ActivityOrla_login extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class ActivityOrla_login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activityorla1_login);
+        setContentView(R.layout.activityorla_login);
 
     } // END onCreate
 
@@ -52,7 +53,7 @@ public class ActivityOrla_login extends AppCompatActivity {
             @Override
             public boolean onLongClick(View view) {
                 activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
-                // new ObtenerDatosBD(ActivityCursos.cl).execute();
+                new ObtenerDatosBD(ActivityOrla_login.this).execute();
                 startActivity(activityCursos);
                 return  true;
             }
@@ -76,10 +77,10 @@ public class ActivityOrla_login extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-
+                        new ObtenerDatosBD(ActivityOrla_login.this).execute();
                         progressDialog.cancel();
                         activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
-                       // new ObtenerDatosBD(ActivityCursos.cl).execute();
+
                         startActivity(activityCursos);
 
 

@@ -24,7 +24,7 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder>{
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.esqueleto_promocion, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.esqueleto_cursos, viewGroup, false);
         viewHolder = new ViewHolder(v);
         return viewHolder;
     }
@@ -32,7 +32,7 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
-        viewHolder.promocion.setText(cursos.get(position).getNombre());
+        viewHolder.curso.setText(cursos.get(position).getNombre());
     }
 
     @Override
@@ -42,12 +42,12 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder>{
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView promocion;
+        TextView curso;
 
         ViewHolder(View itemView) {
             super(itemView);
-            cv = (CardView)itemView.findViewById(R.id.cardView);
-            promocion = (TextView)itemView.findViewById(R.id.lbl_promocion);
+            cv = (CardView)itemView.findViewById(R.id.cardView_cursos);
+            curso = (TextView)itemView.findViewById(R.id.TXV_Curso);
 
         }
     }
