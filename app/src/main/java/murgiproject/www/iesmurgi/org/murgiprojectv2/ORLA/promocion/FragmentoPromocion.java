@@ -61,7 +61,7 @@ public class FragmentoPromocion extends Fragment {
     }
 
     public void lanzarAdapter() {
-        PromocionAdapter adapter = new PromocionAdapter(promociones);
+        PromocionAdapter adapter = new PromocionAdapter(getActivity(),promociones);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }
