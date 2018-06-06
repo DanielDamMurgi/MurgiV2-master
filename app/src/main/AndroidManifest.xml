@@ -61,7 +61,8 @@
             android:name=".ORLA.ActivityOrla_Registro"
             android:screenOrientation="portrait" />
         <activity android:name=".ORLA.ActivityCursos" />
-        <activity android:name=".ORLA.PromocionActivity"></activity>
+        <activity android:name=".ORLA.PromocionActivity" />
+        <activity android:name=".ORLA.AlumnoActivity"></activity>
     </application>
 
 </manifest>

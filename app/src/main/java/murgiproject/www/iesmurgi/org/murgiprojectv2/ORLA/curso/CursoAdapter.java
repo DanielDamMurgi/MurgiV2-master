@@ -1,5 +1,7 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.curso;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,16 +12,22 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Curso;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.ActivityCursos;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.AlumnoActivity;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
-public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder>{
+public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder> implements View.OnClickListener{
     private ArrayList<Curso> cursos;
     private ViewHolder viewHolder;
     private CardView cardView;
+    private Intent intentAlumnos;
+    private Context context;
 
-    public CursoAdapter (ArrayList<Curso> cursos){
+    public CursoAdapter (Context context, ArrayList<Curso> cursos){
+        this.context = context;
         this.cursos = new ArrayList<>();
         this.cursos = cursos;
+
     }
 
     @Override
@@ -30,14 +38,28 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
         viewHolder.curso.setText(cursos.get(position).getNombre());
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intentAlumnos = new Intent(context,AlumnoActivity.class);
+                intentAlumnos.putExtra("id_curso",cursos.get(position).getId());
+                context.startActivity(intentAlumnos);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return cursos.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

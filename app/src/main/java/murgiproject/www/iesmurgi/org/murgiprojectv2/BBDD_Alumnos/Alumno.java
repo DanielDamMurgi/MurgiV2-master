@@ -15,6 +15,14 @@ public class Alumno {
     public Alumno() {
     }
 
+    public Alumno(String id, String nombre, String apellido1, String apellido2, String rutaImg) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.rutaImg = rutaImg;
+    }
+
     public Alumno(String id, String nombre, String apellido1, String apellido2, String rutaImg, Promocion promocion, Curso curso) {
         this.id = id;
         this.nombre = nombre;

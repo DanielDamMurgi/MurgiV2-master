@@ -43,7 +43,7 @@ public class PromocionAdapter extends RecyclerView.Adapter<PromocionAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
 
         viewHolder.promocion.setText(promociones.get(position).getNombre());
 
@@ -51,8 +51,7 @@ public class PromocionAdapter extends RecyclerView.Adapter<PromocionAdapter.View
             @Override
             public void onClick(View view) {
                 intentCursos = new Intent(context,ActivityCursos.class);
-                numPro = (int) viewHolder.getItemId()-1;
-                intentCursos.putExtra("id_curso",promociones.get(numPro).getId_promocion());
+                intentCursos.putExtra("id_promocion",promociones.get(position).getId_promocion());
                 context.startActivity(intentCursos);
             }
         });
@@ -65,12 +64,10 @@ public class PromocionAdapter extends RecyclerView.Adapter<PromocionAdapter.View
 
     @Override
     public void onClick(View view) {
-        intentCursos = new Intent(context,ActivityCursos.class);
-        Log.d(TAG,"estassssss ----------------------------------");
-        context.startActivity(intentCursos);
+
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView promocion;
 
@@ -78,14 +75,6 @@ public class PromocionAdapter extends RecyclerView.Adapter<PromocionAdapter.View
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cardView);
             promocion = (TextView)itemView.findViewById(R.id.lbl_promocion);
-        }
-
-        @Override
-        public void onClick(View view) {
-            intentCursos = new Intent(context,ActivityCursos.class);
-            Log.d(TAG,"estassssss ----------------------------------");
-            context.startActivity(intentCursos);
-
         }
     }
 

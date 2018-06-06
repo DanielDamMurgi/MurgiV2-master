@@ -1,14 +1,11 @@
-package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.curso;
-
-import android.app.Fragment;
+package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.alumno;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,30 +17,32 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Curso;
+import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Alumno;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
-public class FragmentoCurso extends Fragment {
+public class FragmentoAlumno extends Fragment {
 
     private static final String TAG = "";
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
-    public ArrayList<Curso> cursos = new ArrayList<>();
-    public ProgressDialog progressDialog_curso;
-    private String numPro;
-    private final String consulta = "select distinct curso.id_curso, curso.nombre from curso, alumno where alumno.promocion = ";
-    ActualizacionCurso actualizacionCurso;
+    public ArrayList<Alumno> alumnos = new ArrayList<>();
+    public ProgressDialog progressDialog_alumno;
+    private String numCurso;
+    private final String consulta = "select distinct id_al, nombre, app,app2,rutaImg from alumno where id_curso= ";
+    ActualizacionAlumno actualizacionAlumno;
 
-    public FragmentoCurso() {
-
+    public FragmentoAlumno() {
+        // Required empty public constructor
     }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fragmento_cursos,container,false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view =  inflater.inflate(R.layout.fragment_fragmento_alumno, container, false);
 
         linearLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_cursos);
-
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_alumnos);
 
         return view;
     }
@@ -51,29 +50,29 @@ public class FragmentoCurso extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        numPro= getActivity().getIntent().getExtras().getString("id_promocion");
-        progressDialog_curso = new ProgressDialog(getActivity());
-        progressDialog_curso.setMessage("Cargando Cursos...");
-        progressDialog_curso.show();
+        numCurso = getActivity().getIntent().getExtras().getString("id_curso");
+        progressDialog_alumno = new ProgressDialog(getActivity());
+        progressDialog_alumno.setMessage("Cargando Alumnos...");
+        progressDialog_alumno.show();
 
-        if (cursos.isEmpty()){
+        if (alumnos.isEmpty()){
 
-            new ConsultaCursos(consulta+numPro, progressDialog_curso).execute();
-            actualizacionCurso = new ActualizacionCurso();
-            actualizacionCurso.execute();
+            new ConsultaAlumnos(consulta+ numCurso, progressDialog_alumno).execute();
+            actualizacionAlumno = new ActualizacionAlumno();
+            actualizacionAlumno.execute();
         }
 
     }
 
     public void lanzarAdapter() {
-        CursoAdapter adapter = new CursoAdapter(getActivity(),cursos);
+        AlumnoAdapter adapter = new AlumnoAdapter(getActivity(),alumnos);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
-    public class ConsultaCursos extends AsyncTask<Void, Void, ResultSet> {
+    public class ConsultaAlumnos extends AsyncTask<Void, Void, ResultSet> {
 
         android.app.AlertDialog dialog;
         String consultaCs;
@@ -85,7 +84,7 @@ public class FragmentoCurso extends Fragment {
         private final String usu = "ujeff";
         private final String pass = "pjeff";
 
-        public ConsultaCursos(String consulta, ProgressDialog dialog) {
+        public ConsultaAlumnos(String consulta, ProgressDialog dialog) {
             this.consultaCs = consulta;
             this.dialog = dialog;
         }
@@ -121,9 +120,12 @@ public class FragmentoCurso extends Fragment {
             super.onPostExecute(resultSet);
             try {
                 while (resultSet.next()) {
-                    cursos.add(new Curso(
-                            resultPro.getString("id_curso"),
-                            resultPro.getString("nombre")
+                    alumnos.add(new Alumno(
+                            resultPro.getString("id_al"),
+                            resultPro.getString("nombre"),
+                            resultPro.getString("app"),
+                            resultPro.getString("app2"),
+                            resultPro.getString("rutaImg")
                     ));
                 }
                 lanzarAdapter();
@@ -143,9 +145,9 @@ public class FragmentoCurso extends Fragment {
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    public class ActualizacionCurso extends AsyncTask<Void, Void, Void> {
+    public class ActualizacionAlumno extends AsyncTask<Void, Void, Void> {
 
-        public ActualizacionCurso() {
+        public ActualizacionAlumno() {
         }
 
         @Override
@@ -162,7 +164,7 @@ public class FragmentoCurso extends Fragment {
         @Override
         protected void onProgressUpdate(Void... voids) {
             super.onProgressUpdate();
-            progressDialog_curso.dismiss();
+            progressDialog_alumno.dismiss();
         }
     }//Fin AsynTack
-}//FIN CLASE PRINCIPAL
+}
