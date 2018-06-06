@@ -65,6 +65,8 @@ public class FragmentoCurso extends Fragment {
 
     }
 
+
+
     public void lanzarAdapter() {
         CursoAdapter adapter = new CursoAdapter(getActivity(),cursos);
         recyclerView.setLayoutManager(linearLayoutManager);

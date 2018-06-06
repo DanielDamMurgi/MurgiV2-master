@@ -41,11 +41,13 @@ public class FragmentoPromocion extends Fragment {
         progressDialog_promocion.setMessage("Cargando Promociones...");
         progressDialog_promocion.show();
 
-        promociones.clear();
+        if (promociones.isEmpty()) {
 
-        new ConsultaPromocion(consulta, progressDialog_promocion).execute();
-        actualizacionPromocion = new ActualizacionPromocion();
-        actualizacionPromocion.execute();
+            new ConsultaPromocion(consulta, progressDialog_promocion).execute();
+            actualizacionPromocion = new ActualizacionPromocion();
+            actualizacionPromocion.execute();
+
+        }
     }
 
     @Override
