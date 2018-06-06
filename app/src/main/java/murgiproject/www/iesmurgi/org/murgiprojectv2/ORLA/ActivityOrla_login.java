@@ -58,7 +58,8 @@ public class ActivityOrla_login extends AppCompatActivity {
                 return  true;
             }
         });
-
+        activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
+        startActivity(activityCursos);
     } //END onStart
 
     public void registrar(View view) {
@@ -67,34 +68,34 @@ public class ActivityOrla_login extends AppCompatActivity {
 
     }// END registrar
 
-    public void iniciar_sesion(View view) {
-
-        if (comprobar_acceso()){
-            progressDialog.setMessage(getResources().getString(R.string.iniciciando_sesion));
-            progressDialog.show();
-
-            auth.signInWithEmailAndPassword(correo,clave).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
-                        new ObtenerDatosBD(ActivityOrla_login.this).execute();
-
-                        activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
-                        startActivity(activityCursos);
-
-
-                        et_usuario.setText("");
-                        et_clave.setText("");
-                    }else{
-                        progressDialog.cancel();
-                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.clave_contra_incorrectas), Toast.LENGTH_LONG).show();
-                    }
-
-                }
-            });
-        }
-
-    }// END iniciar_sesion
+//    public void iniciar_sesion(View view) {
+//
+//        if (comprobar_acceso()){
+//            progressDialog.setMessage(getResources().getString(R.string.iniciciando_sesion));
+//            progressDialog.show();
+//
+//            auth.signInWithEmailAndPassword(correo,clave).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                @Override
+//                public void onComplete(@NonNull Task<AuthResult> task) {
+//                    if (task.isSuccessful()){
+//                        new ObtenerDatosBD(ActivityOrla_login.this).execute();
+//
+//                        activityCursos = new Intent(getApplicationContext(),PromocionActivity.class);
+//                        startActivity(activityCursos);
+//
+//
+//                        et_usuario.setText("");
+//                        et_clave.setText("");
+//                    }else{
+//                        progressDialog.cancel();
+//                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.clave_contra_incorrectas), Toast.LENGTH_LONG).show();
+//                    }
+//
+//                }
+//            });
+//        }
+//
+//    }// END iniciar_sesion
 
     private boolean comprobar_acceso(){
         correo = et_usuario.getText().toString().trim();

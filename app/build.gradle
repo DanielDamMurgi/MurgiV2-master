@@ -5,7 +5,7 @@ android {
         release {
             keyAlias 'iesmurgi'
             keyPassword 'iesmurgi'
-            storeFile file('C:\\Users\\Equipo\\Documents\\Android Studio Proyectos\\MurgiV2-master-key\\key.jks')
+            storeFile file('C:\\key.jks')
             storePassword 'iesmurgi'
         }
     }

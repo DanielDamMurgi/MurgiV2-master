@@ -41,8 +41,10 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         viewHolder.alumno.setText(alumnos.get(position).getNombre()+"\n"+alumnos.get(position).getApellido1()+" "+alumnos.get(position).getApellido2());
-        Picasso.with(context).load(alumnos.get(position).getRutaImg()).into(viewHolder.imagenAlumno);
+        Picasso.with(context).load("https://drive.google.com/uc?export=download&id=0B1hz1D7khQcJem5YX21LN2Q5Znc").into(viewHolder.imagenAlumno);
+        //  Picasso.with(context).error().load(alumnos.get(position).getRutaImg()).into(viewHolder.imagenAlumno);
         //insertarImagen(alumnos.get(position).getRutaImg()+"?usp=sharing",viewHolder.imagenAlumno);
+        //https://drive.google.com/file/d/0B1hz1D7khQcJem5YX21LN2Q5Znc
     }
 
 
