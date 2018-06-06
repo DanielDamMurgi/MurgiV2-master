@@ -53,10 +53,10 @@ public class FragmentoAlumno extends Fragment {
         numCurso = getActivity().getIntent().getExtras().getString("id_curso");
         progressDialog_alumno = new ProgressDialog(getActivity());
         progressDialog_alumno.setMessage("Cargando Alumnos...");
-        progressDialog_alumno.show();
+
 
         if (alumnos.isEmpty()){
-
+            progressDialog_alumno.show();
             new ConsultaAlumnos(consulta+ numCurso, progressDialog_alumno).execute();
             actualizacionAlumno = new ActualizacionAlumno();
             actualizacionAlumno.execute();

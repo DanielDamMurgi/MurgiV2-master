@@ -54,9 +54,11 @@ public class FragmentoCurso extends Fragment {
         numPro= getActivity().getIntent().getExtras().getString("id_promocion");
         progressDialog_curso = new ProgressDialog(getActivity());
         progressDialog_curso.setMessage("Cargando Cursos...");
-        progressDialog_curso.show();
 
         if (cursos.isEmpty()){
+        progressDialog_curso.show();
+
+
 
             new ConsultaCursos(consulta+numPro, progressDialog_curso).execute();
             actualizacionCurso = new ActualizacionCurso();

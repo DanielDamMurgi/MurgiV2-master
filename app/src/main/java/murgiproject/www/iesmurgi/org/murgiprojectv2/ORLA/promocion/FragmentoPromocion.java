@@ -39,10 +39,10 @@ public class FragmentoPromocion extends Fragment {
         super.onStart();
         progressDialog_promocion = new ProgressDialog(getActivity());
         progressDialog_promocion.setMessage("Cargando Promociones...");
-        progressDialog_promocion.show();
+
 
         if (promociones.isEmpty()) {
-
+            progressDialog_promocion.show();
             new ConsultaPromocion(consulta, progressDialog_promocion).execute();
             actualizacionPromocion = new ActualizacionPromocion();
             actualizacionPromocion.execute();
