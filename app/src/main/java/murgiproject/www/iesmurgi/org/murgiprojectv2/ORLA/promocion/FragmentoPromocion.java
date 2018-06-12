@@ -1,6 +1,5 @@
 package murgiproject.www.iesmurgi.org.murgiprojectv2.ORLA.promocion;
 
-
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -18,7 +17,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.ObtenerDatosBD;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.BBDD_Alumnos.Promocion;
 import murgiproject.www.iesmurgi.org.murgiprojectv2.R;
 
@@ -33,27 +31,25 @@ public class FragmentoPromocion extends Fragment {
     public FragmentoPromocion() {
 
     }
-//
+
     @Override
     public void onStart() {
         super.onStart();
+        getActivity().setTitle("Promociones");
         progressDialog_promocion = new ProgressDialog(getActivity());
         progressDialog_promocion.setMessage("Cargando Promociones...");
-
 
         if (promociones.isEmpty()) {
             progressDialog_promocion.show();
             new ConsultaPromocion(consulta, progressDialog_promocion).execute();
             actualizacionPromocion = new ActualizacionPromocion();
             actualizacionPromocion.execute();
-
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fragmento_promocion, container, false);
 
         linearLayoutManager = new LinearLayoutManager(getContext());
@@ -63,7 +59,7 @@ public class FragmentoPromocion extends Fragment {
     }
 
     public void lanzarAdapter() {
-        PromocionAdapter adapter = new PromocionAdapter(getActivity(),promociones);
+        PromocionAdapter adapter = new PromocionAdapter(getActivity(), promociones);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }
@@ -95,12 +91,7 @@ public class FragmentoPromocion extends Fragment {
                 resultPro = null;
                 publishProgress();
 
-                if (consultaPd.startsWith("select"))
-                    resultPro = sentenciaPd.executeQuery(consultaPd);
-
-                if (consultaPd.startsWith("update") || consultaPd.startsWith("delete")) {
-                    sentenciaPd.executeUpdate(consultaPd);
-                }
+                resultPro = sentenciaPd.executeQuery(consultaPd);
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -150,7 +141,7 @@ public class FragmentoPromocion extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

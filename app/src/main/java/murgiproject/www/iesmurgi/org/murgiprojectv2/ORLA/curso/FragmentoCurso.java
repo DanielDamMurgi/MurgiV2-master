@@ -51,6 +51,7 @@ public class FragmentoCurso extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        getActivity().setTitle("Cursos");
         numPro= getActivity().getIntent().getExtras().getString("id_promocion");
         progressDialog_curso = new ProgressDialog(getActivity());
         progressDialog_curso.setMessage("Cargando Cursos...");
@@ -155,7 +156,7 @@ public class FragmentoCurso extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

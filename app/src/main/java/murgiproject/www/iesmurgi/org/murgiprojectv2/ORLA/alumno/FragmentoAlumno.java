@@ -50,6 +50,7 @@ public class FragmentoAlumno extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        getActivity().setTitle("Fotos orla");
         numCurso = getActivity().getIntent().getExtras().getString("id_curso");
         progressDialog_alumno = new ProgressDialog(getActivity());
         progressDialog_alumno.setMessage("Cargando Alumnos...");
@@ -153,7 +154,7 @@ public class FragmentoAlumno extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

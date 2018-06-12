@@ -31,13 +31,11 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orla__registro);
-
     }// END onCreate
 
     @Override
     protected void onStart() {
         super.onStart();
-
         correo = (EditText) findViewById(R.id.TXT_Registro_Correo);
         clave1 = (EditText) findViewById(R.id.TXT_Registro_Contraseña);
         clave2 = (EditText) findViewById(R.id.TXT_Registro_RepetirContraseña);
@@ -46,7 +44,6 @@ public class ActivityOrla_Registro extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
         activityLogin = new Intent(getApplicationContext(), ActivityOrla_login.class);
-
     }// END onStart
 
     public void registro(View view) {
@@ -62,10 +59,8 @@ public class ActivityOrla_Registro extends AppCompatActivity {
                         progressDialog.cancel();
                         Toast.makeText(ActivityOrla_Registro.this, getResources().getString(R.string.registrado_correctamente), Toast.LENGTH_SHORT).show();
                         startActivity(activityLogin);
-
                     } else {
                         progressDialog.cancel();
-
                         Toast.makeText(ActivityOrla_Registro.this, getResources().getString(R.string.fallo_registro), Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -76,7 +71,6 @@ public class ActivityOrla_Registro extends AppCompatActivity {
     private boolean comprobarCampos() {
 
         if (correo.getText().length() <= 0 || clave1.getText().length() <= 0 || clave2.getText().length() <= 0) {
-
             if (correo.getText().length() <= 0) {
                 Toast.makeText(this, getResources().getString(R.string.inserta_correo), Toast.LENGTH_LONG).show();
                 return false;
@@ -100,8 +94,6 @@ public class ActivityOrla_Registro extends AppCompatActivity {
                 return false;
             }
         }
-
         return true;
     }// END comprobarCampos
-
-}
+} // FIN CLASE
