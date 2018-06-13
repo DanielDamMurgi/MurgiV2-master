@@ -24,7 +24,7 @@ public class PromocionAdapter extends RecyclerView.Adapter<PromocionAdapter.View
     static Intent intentCursos;
     private int numPro;
     static Context context;
-    static final String TAG = "MyActivity";
+
     public PromocionAdapter() {
 
     }

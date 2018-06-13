@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,8 @@ public class FragmentoAlumno extends Fragment {
     public ArrayList<Alumno> alumnos = new ArrayList<>();
     public ProgressDialog progressDialog_alumno;
     private String numCurso;
-    private final String consulta = "select distinct id_al, nombre, app,app2,rutaImg from alumno where id_curso= ";
+    private String numPromocion;
+    private String consulta ;
     ActualizacionAlumno actualizacionAlumno;
 
     public FragmentoAlumno() {
@@ -52,17 +54,18 @@ public class FragmentoAlumno extends Fragment {
         super.onStart();
         getActivity().setTitle("Fotos orla");
         numCurso = getActivity().getIntent().getExtras().getString("id_curso");
+        numPromocion = getActivity().getIntent().getExtras().getString("id_promo");
         progressDialog_alumno = new ProgressDialog(getActivity());
         progressDialog_alumno.setMessage("Cargando Alumnos...");
 
+        Log.d(TAG,"curso "+numCurso+ "promo "+numPromocion);
 
         if (alumnos.isEmpty()){
             progressDialog_alumno.show();
-            new ConsultaAlumnos(consulta+ numCurso, progressDialog_alumno).execute();
+            new ConsultaAlumnos("select distinct id_al, nombre, app,app2,rutaImg from alumno where id_curso = "+numCurso+" AND promocion = "+numPromocion, progressDialog_alumno).execute();
             actualizacionAlumno = new ActualizacionAlumno();
             actualizacionAlumno.execute();
         }
-
     }
 
     public void lanzarAdapter() {
@@ -154,7 +157,7 @@ public class FragmentoAlumno extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(2000);
+                Thread.sleep(3500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

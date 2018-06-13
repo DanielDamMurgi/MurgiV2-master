@@ -22,12 +22,13 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder> 
     private CardView cardView;
     private Intent intentAlumnos;
     private Context context;
+    private String promo;
 
-    public CursoAdapter (Context context, ArrayList<Curso> cursos){
+    public CursoAdapter (Context context, ArrayList<Curso> cursos, String promo){
         this.context = context;
         this.cursos = new ArrayList<>();
         this.cursos = cursos;
-
+        this.promo=promo;
     }
 
     @Override
@@ -47,6 +48,8 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.ViewHolder> 
             public void onClick(View view) {
                 intentAlumnos = new Intent(context,AlumnoActivity.class);
                 intentAlumnos.putExtra("id_curso",cursos.get(position).getId());
+                intentAlumnos.putExtra("id_promo",promo);
+
                 context.startActivity(intentAlumnos);
             }
         });

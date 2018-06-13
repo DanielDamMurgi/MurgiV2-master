@@ -43,8 +43,6 @@ public class FragmentoCurso extends Fragment {
 
         linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_cursos);
-
-
         return view;
     }
 
@@ -57,9 +55,7 @@ public class FragmentoCurso extends Fragment {
         progressDialog_curso.setMessage("Cargando Cursos...");
 
         if (cursos.isEmpty()){
-        progressDialog_curso.show();
-
-
+            progressDialog_curso.show();
 
             new ConsultaCursos(consulta+numPro, progressDialog_curso).execute();
             actualizacionCurso = new ActualizacionCurso();
@@ -68,10 +64,8 @@ public class FragmentoCurso extends Fragment {
 
     }
 
-
-
     public void lanzarAdapter() {
-        CursoAdapter adapter = new CursoAdapter(getActivity(),cursos);
+        CursoAdapter adapter = new CursoAdapter(getActivity(),cursos,numPro);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }
@@ -156,7 +150,7 @@ public class FragmentoCurso extends Fragment {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(2000);
+                Thread.sleep(3500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
