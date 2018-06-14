@@ -30,7 +30,7 @@ public class FragmentoAlumno extends Fragment {
     public ProgressDialog progressDialog_alumno;
     private String numCurso;
     private String numPromocion;
-    private String consulta ;
+    private String consulta;
     ActualizacionAlumno actualizacionAlumno;
 
     public FragmentoAlumno() {
